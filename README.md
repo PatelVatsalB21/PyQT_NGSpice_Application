@@ -59,10 +59,5 @@ PyQt is one of the most popular Python bindings for the Qt cross-platform C++ fr
 </br>
 https://wiki.python.org/moin/PyQt
 
-
-
-
-
-
-
-
+## Author
+- [Vatsal Patel](https://github.com/patelvatsalb21), Bachelor of Technology in Electronics and Communication Engineering, VGEC
