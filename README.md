@@ -47,7 +47,17 @@ It is made to interact with the command prompt or terminal. It send the commands
  - Use NGspice to generate ".raw" file and parse it withe the help of [LTspice library](https://pypi.org/project/ltspice/) and simulate and generate outputs
  - Use [Pyspice library](https://pyspice.fabrice-salvaire.fr/releases/v1.4/overview.html#:~:text=PySpice%20is%20an%20open%20source,by%20the%20Sandia%20National%20Laboratories.) that provides integration of NGspice andpython combined for ease of use and it is free and opensource.
 
+## Software Used
 
+### NgSpice
+It is an Open Source Software for Spice Simulations. For more details refer:
+</br>
+http://ngspice.sourceforge.net/docs.html
+
+### PyQT
+PyQt is one of the most popular Python bindings for the Qt cross-platform C++ framework. PyQt was developed by Riverbank Computing Limited. Qt itself is developed as part of the Qt Project. 
+</br>
+https://wiki.python.org/moin/PyQt
 
 
 
