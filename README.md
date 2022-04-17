@@ -5,8 +5,7 @@ This project is developed to interface ngspice and build a desktop application u
 - [Abstract](#abstract)
 - [App Functioning](#app-functioning)
 - [Steps to run this project](#steps-to-run-this-project)
-- [Observations](#observations)
-- [Limitations](#limitations)
+- [Next Steps](#next-steps)
 - [Software Used](#software-used)
   * [NgSpice](#ngspice)
   * [PyQT](#pyqt)
@@ -32,7 +31,6 @@ It defines the UI of the app and consist of code related to PyQT.
 ### Worker.py
 It is made to interact with the command prompt or terminal. It send the commands to the command prompt and also logs the outputs and errors from it. It is then call by App.py for use.
 
-
 ## Steps to run this project
 1. Open a new terminal
 2. Clone this project using the following command:</br>
@@ -42,6 +40,15 @@ It is made to interact with the command prompt or terminal. It send the commands
 4. Click on the Add Netlist File button</br>
 5. Locate the netlist file with ".cir" extension
 6. Wait for process to complete and then save the simulation results generated.
+
+## Next Steps
+ As the project is working fine now it needs to enhance the UI. The ngspice windows should not be visile along with the outputs. All the simulation logs and the outputs should be visible within PyQT app itself. This can be done in three ways that needs to be tested.
+ - Controlling the ngspice processes and shoe it in PyQT app
+ - Use NGspice to generate ".raw" file and parse it withe the help of [LTspice library](https://pypi.org/project/ltspice/) and simulate and generate outputs
+ - Use [Pyspice library](https://pyspice.fabrice-salvaire.fr/releases/v1.4/overview.html#:~:text=PySpice%20is%20an%20open%20source,by%20the%20Sandia%20National%20Laboratories.) that provides integration of NGspice andpython combined for ease of use and it is free and opensource.
+
+
+
 
 
 
