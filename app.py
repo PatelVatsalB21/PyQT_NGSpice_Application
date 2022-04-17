@@ -1,31 +1,25 @@
 import sys
-
-# Import QApplication and the required widgets from PyQt5.QtWidgets
 from PyQt5.QtWidgets import *
 from worker import Worker
 import os
 
-# Create a subclass of QMainWindow to setup the calculator's GUI
 class PyUi(QMainWindow):
-    """PyCalc's View (GUI)."""
     def __init__(self):
         super().__init__()
         self.worker = Worker()
         self.worker.outSignal.connect(self.logging)
-        # Set some main window's properties
-        self.setWindowTitle('PyCalc')
-        self.setFixedSize(600, 600)
-        # Set the central widget and the general layout
+        self.setWindowTitle('Netlist Simulator')
+        self.setGeometry(200, 200, 600, 600)
         self.generalLayout = QVBoxLayout()
         self._centralWidget = QWidget(self)
         self.setCentralWidget(self._centralWidget)
         self._centralWidget.setLayout(self.generalLayout)
 
-        self.btn = QPushButton("Add File")
+        self.btn = QPushButton("Add Netlist File")
         self.btn.clicked.connect(self.getfile)
 
         self.generalLayout.addWidget(self.btn)
-        self.le = QLabel("Hello")
+        self.le = QLabel("Process Instruction will be displayed here.")
                     
         self.generalLayout.addWidget(self.le)
 		
@@ -36,25 +30,19 @@ class PyUi(QMainWindow):
         d = os.path.dirname(fname)
         d = d.replace('/','\\')
         f = os.path.basename(fname)
-        self.le.setText(d)
+        self.le.setText("Source Directory is " + d + " and the selected file is " + f)
         command = "ngspice " + f
         self.worker.run_command(command, cwd=d, shell=True)
 
     def logging(self, string):
         self.le.setText(string.strip())
-
         
 
-# Client code
 def main():
-    """Main function."""
-    # Create an instance of QApplication
-    pycalc = QApplication(sys.argv)
-    # Show the calculator's GUI
+    pyapp = QApplication(sys.argv)
     view = PyUi()
     view.show()
-    # Execute the calculator's main loop
-    sys.exit(pycalc.exec_())
+    sys.exit(pyapp.exec_())
 
 if __name__ == '__main__':
     main()
