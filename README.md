@@ -38,8 +38,17 @@ It is made to interact with the command prompt or terminal. It send the commands
 3. Run the python file app.py directly or via terminal:</br>
 ```python app.py```</br>
 4. Click on the Add Netlist File button</br>
+
+<img src="https://github.com/PatelVatsalB21/PyQT_NGSpice_Application/blob/main/Images/Main%20Screen.png"/>
+
 5. Locate the netlist file with ".cir" extension
+
+<img src="https://github.com/PatelVatsalB21/PyQT_NGSpice_Application/blob/main/Images/Main%20Screen%202.png"/>
+
 6. Wait for process to complete and then save the simulation results generated.
+
+<img src="https://github.com/PatelVatsalB21/PyQT_NGSpice_Application/blob/main/Images/ngspice%20screen.png"/>
+<img src="https://github.com/PatelVatsalB21/PyQT_NGSpice_Application/blob/main/Images/Outputs.png"/>
 
 ## Next Steps
  As the project is working fine now it needs to enhance the UI. The ngspice windows should not be visile along with the outputs. All the simulation logs and the outputs should be visible within PyQT app itself. This can be done in three ways that needs to be tested.
